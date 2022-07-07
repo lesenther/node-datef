@@ -5,13 +5,15 @@
   "author": "Logan Esenther (logan@cal.berkeley.edu)",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/*.test.js"
+    "test": "mocha ./tests/*.test.js",
+    "prepare": "husky install"
   },
   "license": "ISC",
   "dependencies": {
     "time-short-string": "github:lesenther/node-time-short-string"
   },
   "devDependencies": {
+    "husky": "^8.0.1",
     "mocha": "^10.0.0"
   }
 }
