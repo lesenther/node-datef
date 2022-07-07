@@ -6,6 +6,9 @@ const time = require('time-short-string');
  * @param input
  */
  function datef(arg = false) {
+  // if arg is empty, force it to get current timestamp
+  if (!arg.length) arg = false;
+
   // If arg is numeric, assume it's a unix timestamp
   if (!isNaN(arg) && !isNaN(parseInt(arg))) {
     arg = parseInt(arg);

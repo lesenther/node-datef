@@ -10,6 +10,13 @@ describe('test datef formats', () => {
     done();
   });
 
+  it('should return the current time when empty input', done => {
+    const result = datef('');
+    assert.equal(result.hasOwnProperty('diff_s'), true);
+    assert.equal(result.diff_s, 0);
+    done();
+  });
+
   it('should parse 10 character numeric strings in seconds', done => {
     const nowSeconds = `${+new Date()}`.substring(0, 10);
     const result = datef(nowSeconds);
