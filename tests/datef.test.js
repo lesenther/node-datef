@@ -41,4 +41,12 @@ describe('test datef formats', () => {
     done();
   });
 
+  it('should get proper utc value', done => {
+    const nowUtc = new Date().toUTCString();
+    const result = datef(nowUtc);
+    assert.equal(result.hasOwnProperty('utc'), true);
+    assert.equal(result.utc, nowUtc);
+    done();
+  });
+
 });
